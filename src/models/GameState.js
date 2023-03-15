@@ -58,7 +58,7 @@ export const gameState = reactive({
       timeRemaining: TIME_CONTROL
     },
     black: {
-      avatar: '/nperry_photo.png',
+      avatar: 'nperry_photo.png',
       color: 'black',
       name: 'Nate-Bot',
       elo: 3900,
