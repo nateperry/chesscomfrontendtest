@@ -34,7 +34,7 @@
         }
 
         button {
-            background: url(../assets/repeat.png);
+            background: url(repeat.png);
             background-size: contain;
             background-position: center;
             border: 0;

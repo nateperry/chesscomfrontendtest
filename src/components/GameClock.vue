@@ -67,7 +67,7 @@
         }
 
         &.current-player:before {
-            background-image: url(../assets/timer.png);
+            background-image: url(timer.png);
             animation-name: clock-spin;
             animation-duration: 4s;
             animation-timing-function: steps(5, start);
