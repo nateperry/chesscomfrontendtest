@@ -3,7 +3,7 @@
 Hello, thank you for reviewing my submission. I have completed the original Application Requirements along with a few extras. This is my first ever Vue.js application,
 so I apologize if there are Vue best practices that I may not gotten quite right or done consistently. This was a fun project to explore Vue.js and how it works.
 
-The app can be viewed at: [TODO]()
+The app can be viewed at: [https://nateperry.github.io/chesscomfrontendtest/](https://nateperry.github.io/chesscomfrontendtest/)
 
 ###### Local Development
 To run the app locally, follow these easy steps after downloading the project.
