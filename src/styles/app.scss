@@ -1,0 +1,113 @@
+@import '_breakpoints.scss';
+
+/* global variables */
+:root {
+    --siteBackground: rgb(81,80,76);
+    --sitePrimaryTextColor: #fff;
+    --siteDarkTextColor: rgb(49, 46, 43);
+    --siteFont: sans-serif;
+    --siteBorderRadius: 4px;
+    --siteBorderRadiusLg: 12px;
+
+    // dimensions
+    --chessboardSize: 89vw;
+    --chessboardMaxSize: 768px;
+
+    @include breakpoint-mobile {
+        --chessboardSize: 63vw;
+    }
+
+    @include breakpoint-tablet {
+        --chessboardSize: 60vw;
+    }
+
+    @include breakpoint-desktops {
+        --chessboardSize: var(--chessboardMaxSize);
+    }
+
+    --chessboardSquareSize: 12.5%;
+    --chessboardSquareHighlightBg: rgba(235, 97, 80, .8);
+
+    --siteWhite: #fff;
+    --siteGreen: #7FA650;
+    --siteLightGrey: #DBD9D7;
+    --siteRed: #ca3431;
+    --siteOrange: #e58f2a;
+    --siteYellow: #dbac16;
+    --siteSystemColor: lightseagreen;
+    --siteBlackShadow: rgba(0,0,0,0.6);
+    --siteWinColor: var(--siteGreen);
+    --siteLossColor: grey;
+    --siteTextShadow: 0 1px 0 var(--siteBlackShadow);
+
+    --menuBackgroundColor: rgba(65, 64, 61, 1);
+    --menuBackgroundAltColor: rgba(50, 49, 46, 1);
+    --menuLightBackgroundColor: var(--siteWhite);
+
+     /* Blue theme */
+    --theme-LightSQColor: #EAE9D2;
+    --theme-DarkSQColor: #4B7399;
+
+    --evalBarWColor: var(--theme-LightSQColor);
+    --evalBarBColor: var(--theme-DarkSQColor);
+
+    --gameClockBlack: var(--menuBackgroundColor);
+    --gameClockWhite: var(--siteWhite);
+}
+
+/* global resets */
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--siteBackground);
+    border: 0;
+    color: var(--sitePrimaryTextColor);
+    font-family: var(--siteFont);
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    min-width: 100%;
+    width: 100%;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: [chessboard-layout] auto [settings] auto [sidebar] auto;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 100%;
+
+    @include breakpoint-mobile {
+        grid-template-rows: 77vw;
+        grid-gap: 1vw;
+        grid-template-areas:
+                "chessboard-layout sidebar"
+                "settings sidebar";
+    }
+
+    @include breakpoint-tablet {
+        grid-template-areas: none;
+        grid-template-rows: none;
+        grid-template-columns: [chessboard-layout] 65vw [settings] 40px [sidebar] 30vw;
+        row-gap: 1vh;
+        column-gap: 0;
+        padding: 0;
+        max-width: 1200px;
+    }
+
+    @include breakpoint-desktops {
+        row-gap: 1vw;
+        column-gap: 0;
+        grid-template-columns: [chessboard-layout] calc(var(--chessboardMaxSize) + 50px) [settings] 44px [sidebar] auto;
+    }
+}

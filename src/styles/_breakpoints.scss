@@ -1,0 +1,18 @@
+// breakpoint mixins
+@mixin breakpoint-mobile {
+  @media screen and (min-width: 700px) {
+    @content
+  }
+}
+
+@mixin breakpoint-tablet {
+  @media screen and (min-width: 900px) {
+    @content
+  }
+}
+
+@mixin breakpoint-desktops {
+  @media screen and (min-width: 1200px) {
+    @content
+  }
+}
